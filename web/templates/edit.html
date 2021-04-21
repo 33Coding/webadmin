@@ -1,0 +1,40 @@
+<div class="row">
+    <div class="col-sm-12">
+        <div class="card fluid">
+            <div class="row">
+                <div class="col-sm-11">
+                    {{template "partials/header" .}}
+                </div>
+                <div class="col-sm-1">
+                    <label for="drawer-control" class="drawer-toggle persistent"></label>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<input type="checkbox" id="drawer-control" class="drawer persistent">
+<div>
+    <label for="drawer-control" class="drawer-close"></label>
+    {{template "partials/nav" .}}
+</div>
+
+
+<div class="row">
+    <div class="col-sm-12">
+        <div class="card fluid">
+            {{template "inner/edit" .}}
+        </div>
+    </div>
+</div>
+
+
+<div class="row">
+    <div class="col-sm-12">
+        <div class="card fluid">
+            {{template "partials/footer" .}}
+        </div>
+    </div>
+</div>
+

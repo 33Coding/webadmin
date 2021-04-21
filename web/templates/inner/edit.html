@@ -1,0 +1,19 @@
+<form method="POST" id="form_edit" enctype="multipart/form-data">
+
+    <fieldset>
+        <legend>{{.Title}}</legend>
+        <div class="row">
+            {{range $i, $h :=  $.Header}}
+                <div class="col-sm-12 col-md-6">
+                    <label for="{{$h.Title}}">{{$h.Title}}</label>
+                    <input type="text" id="{{$h.Title}}" name="{{$h.Title}}" placeholder="{{$h.Title}}" value="{{index $.Data $i }}"/>
+                </div>
+            {{end}}
+        </div>
+    </fieldset>
+
+    <div class="row">
+        <input type="submit" class="inverse" value="save"/>
+    </div>
+
+</form>

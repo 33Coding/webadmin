@@ -1,0 +1,25 @@
+<table>
+    <caption>{{.Title}}</caption>
+    <thead>
+
+
+    <tr>
+        {{range .Header}}
+            <th>{{.Title}}</th>
+        {{end}}
+    </tr>
+
+
+    </thead>
+    <tbody>
+
+    {{range $i, $d := .Data}}
+        <tr>
+            {{range $j, $h :=  $.Header}}
+                <td data-label="{{$h.Title}}">{{index $d.Values $j }}</td>
+            {{end}}
+        </tr>
+    {{end}}
+
+    </tbody>
+</table>
