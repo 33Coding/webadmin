@@ -45,13 +45,13 @@ func (srv *Webadmin) Run() {
 
 	// web
 	srv.APP.Get("/", srv.index)
+	srv.APP.Get("/user/list", srv.userList)
 
 	// JWT Middleware
 	srv.APP.Use(jwtware.New(jwtware.Config{
 		SigningMethod: "RS256",
 		SigningKey:    srv.PrivateKey.Public(),
 	}))
-
 
 	defer srv.ORM.Close()
 	srv.APP.Listen(":3333")

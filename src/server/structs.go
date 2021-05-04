@@ -11,3 +11,11 @@ type Webadmin struct {
 	APP        *fiber.App
 	PrivateKey *rsa.PrivateKey
 }
+
+type TableHeader struct {
+	Title string
+}
+
+type TableData struct {
+	Values []string
+}
